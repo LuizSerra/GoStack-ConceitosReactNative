@@ -1,80 +1,103 @@
+
 <img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios.png" />
 
 <h3 align="center">
-  Desafio 03: Conceitos do ReactJS
+  Desafio 04: Conceitos do React Native
 </h3>
 
-<blockquote align="center">“Faça seu melhor, mas sempre com prazo de entrega”!</blockquote>
+<blockquote align="center">“Sucesso não é o resultado de um jogo, mas o destino de uma jornada”!</blockquote>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafios?color=%2304D361">
-
-  <a href="https://rocketseat.com.br">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%2304D361">
-  </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
-
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafios/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafios?style=social">
-  </a>
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 </p>
 
 <p align="center">
   <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#calendar-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
 ## :rocket: Sobre o desafio
 
-Nesse desafio, você deve criar uma aplicação para treinar o que você aprendeu até agora no ReactJS!
+Nesse desafio, você deve criar uma aplicação para treinar o que você aprendeu até agora no React Native!
 
-Agora você deve continuar desenvolvendo a aplicação que irá armazenar repositórios do seu portfólio, que você já desenvolveu o backend no último desafio utilizando o Node.js.
+Agora você deve continuar desenvolvendo a aplicação que irá armazenar repositórios do seu portfólio, que você já desenvolveu o backend utilizando o Node.js, e no último desafio em ReactJS.
 
-### Template da aplicação
+## :hammer: Tecnologias
 
-Para te ajudar nesse desafio, criamos para você um modelo que você deve utilizar como um template do Github.
+ - [React Native](https://reactnative.dev/) 
+ - [TypeScript](https://www.typescriptlang.org/)
+ - [Axios](https://www.npmjs.com/package/axios)
+ 
 
-O template está disponível na seguinte url: **[Acessar Template](https://github.com/Rocketseat/gostack-template-conceitos-reactjs)**
+## :key: Como rodar esse projeto.
 
-**Dica**: Caso não saiba utilizar repositórios do Github como template, temos um guia em **[nosso FAQ](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
+Para clonar e executar este aplicativo, você precisará de  [Git](https://git-scm.com/),  [NodeJs](https://nodejs.org/)  Instalado em seu computador.
 
-Agora navegue até a pasta criada e abra no Visual Studio Code, execute o comando `yarn` no seu terminal para instalar todas as dependências e já estará pronto para iniciar.
+O projeto é composto por duas aplicações:
 
-**Atenção:** Não é necessário instalar nenhuma dependencia (como o webpack). O template já vem funcional, e é apenas necessário rodar o comando `yarn start` e codar.
+1.  Back-End ([Link do Repositório]([https://github.com/LuizSerra/GoStack-ConceitosNodeJS](https://github.com/LuizSerra/GoStack-ConceitosNodeJS)))
+
+💡  E preciso efetuar o clone e seguir os passos de instalação do  [Repositório da API]([https://github.com/LuizSerra/GoStack-ConceitosNodeJS](https://github.com/LuizSerra/GoStack-ConceitosNodeJS))
+
+💡 A aplicação precisa que o Back-End esteja sendo executado na porta 3333 para funcionar.
+
+### :sheep: Clonando o repositório.
+```
+# Clone este repositório
+$ git clone https://github.com/LuizSerra/GoStack-ConceitosReactNative.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd goStack-ConceitosReactNative
+```
+### :computer: Rodando a aplicação.
+
+```console
+
+# Instale as dependências
+$ yarn
+
+# Instale as dependências IOS (somente se for usar IOS)
+$ cd ios
+$ pod install
+
+# Execute a Aplicação Android (somente se for usar Android)
+$ yarn android
+
+# Execute a Aplicação IOS (somente se for usar IOS)
+$ yarn ios
+```
 
 ### Funcionalidades da aplicação
 
 Agora que você já está com o template clonado, e pronto para continuar, você deve abrir o arquivo **src/App.js**, e completar onde não possui código com o código para atingir os objetivos de cada funcionalidade.
 
-- **`Listar os repositórios da sua API`**: Deve ser capaz de criar uma lista com o campo **title** de todos os repositórios que estão cadastrados na sua API.
+- **`Listar os repositórios da sua API`**: Deve ser capaz de criar uma lista de todos os repositórios que estão cadastrados na sua API com os campos **title**, **techs** e número de curtidas seguindo o padrão `${repository.likes} curtidas`, apenas alterando o número para ser dinâmico.
 
-- **`Adicionar um repositório a sua API`**: Deve ser capaz de adicionar um novo item na sua API através de um botão com o texto **Adicionar** e, após a criação, deve ser capaz de exibir o nome dele após o cadastro.
-
-- **`Remover um repositório da sua API`**: Para cada item da sua lista, deve possuir um botão com o texto **Remover** que, ao clicar, irá chamar uma função para remover esse item da lista do seu frontend e da sua API.
+- **`Curtir um repositório listado da API`**: Deve ser capaz de curtir um item na sua API através de um botão com o texto **Curtir** e deve atualizar o número de likes na listagem no mobile.
 
 ### Específicação dos testes
 
 Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
 
-Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dê uma olhada em **[nosso FAQ](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
+Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dé uma olhada em **[nosso FAQ](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
 
 Para esse desafio temos os seguintes testes:
 
-- **`should be able to add new repository`**: Para que esse teste passe, sua aplicação deve permitir que um repositório seja adicionado ao seu backend e listado no seu frontend dentro de uma `LI`.
+- **`should add a like to the like counter of the repository`**: Para que esse teste passe, sua aplicação deve permitir ao clicar no botão `Curtir`, um like seja adicionado ao repositório listado, e que essa atualização possa ser visualizada na tela.
 
-- **`should be able to remove repository`**: Para que esse teste passe, sua aplicação deve permitir que ao clicar no botão de remover que vai estar dentro da `LI` do repositório adicionado, o item seja removido da listagem.
+## :computer: Quer contribuir com o Projeto? Saiba como:
 
-## :calendar: Entrega
+-   Faça um  **fork**  do projeto;
+-   Crie uma nova branch com as suas alterações:  `git checkout -b my-feature`
+-   Salve as alterações e crie uma mensagem de commit contando o que você fez:`git commit -m "feature: My new feature"`
+-   Envie as suas alterações:  `git push origin my-feature`
 
-Esse desafio deve ser entregue a partir da plataforma Skylab, envie o link do repositório que você fez suas alterações. Após concluir o desafio, fazer um post no Linkedin e postar o código no Github é uma boa forma de demonstrar seus conhecimentos e esforços para evoluir na sua carreira para oportunidades futuras.
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+
 
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
----
-
-Feito com 💜 by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+Feito com dedicação por Luiz Serra 👋🏽 [Entre em contato](https://www.linkedin.com/in/luizserra)!
 
